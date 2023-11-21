@@ -51,12 +51,17 @@ class Simplex {
     }
 
     showTable() {
+        var table2 = [];
+        var table3 = [];
         for (let i = 0; i < this.table.length; i++) {
             for (let j = 0; j < this.table[0].length; j++) {
-                console.log(`${this.table[i][j]}\t`);
+                table2.push(this.table[i][j]);
             }
-            console.log();
+            table3.push(table2);
+            table2= [];
         }
+        console.log(table3);
+        return table3;
     }
 
     calculate() {

@@ -131,27 +131,23 @@ btnsolve.addEventListener("click", function(e){
 
     e.preventDefault();
 
-    table.push(montarTabelaFO());
-    for (var i=0;i<numConstraints;i++){
-        table.push(montarTabelaConstraints(i))
-    }
-    console.log(table);
-    linha = 0;
-
-    criarTabela(table);
-
     const simplex = new Simplex();
     simplex.setObjectiveFunction(montarTabelaFO());
-    console.log(simplex);
     
 
     
     for (var i=0;i<numConstraints;i++){
         simplex.addRestrictions(montarTabelaConstraints(i));
     }
-    console.log(simplex);
+
+    console.log(simplex.showTable())
 
     simplex.solve();
+    table = simplex.showTable();
+    console.log(table);
+    
+    criarTabela(table);
+
 });
 
 
@@ -160,7 +156,7 @@ function montarTabelaFO() {
     //coloca variaveis
     for(var i = 0;i < numVariaveis;i++){
         const variavel = document.querySelector("#var" + (i+1));
-        fo.push(Number(variavel.value));
+        fo.push(Number(variavel.value * -1));
     }
 
     //coloca as constraints xf1 xf2
