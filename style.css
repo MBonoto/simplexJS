@@ -1,0 +1,49 @@
+
+.passo1 {
+
+}
+
+.apagar {
+    display: none;
+}
+
+
+.variaveisContainer {
+    display: inline-flex;
+    
+    align-items: center;
+
+}
+
+.input {
+    width: 80px;
+    height: 15px;
+}
+
+.constraints {
+    height: 30;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+#container2 {
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}

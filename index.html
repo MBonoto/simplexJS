@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplex</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container1">
+        <h1 class="passo1">Método Simplex</h1>
+        <div>
+            <h2 class="passo1">número de variaveis: </h2> 
+            <input type="number" name="variaveis" id="variaveis" class="passo1 input">
+            <button type="submit" id="confirm" class="passo1" value="enviar">Confirmar</button>
+        </div>
+    </div>
+    
+
+    <div id="container2">
+        
+        <div class="variaveisContainer">
+            <h2>FO Max (z) = </h2>
+
+        </div>
+
+
+        <div class="constraints">
+            <h2>Constraints <button type="submit" id="addConstraint">Adicionar restrição</button></h2>
+        </div>
+
+    </div>
+
+    <button type="submit" id="solve">Resolver</button>
+
+    <script src="./algoritimojs.js"></script>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
